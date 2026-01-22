@@ -95,7 +95,7 @@
             display: flex;
             justify-content: center;
             gap: 1rem;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
         }
 
         .manual-links a {
@@ -105,11 +105,19 @@
             gap: .5rem;
             padding: .75rem 1.5rem;
             min-width: 160px;
+            flex: 1 1 auto;
             background: rgba(255, 255, 255, .2);
             color: #fff;
             text-decoration: none;
             border-radius: 8px;
             transition: background .3s;
+        }
+
+        @media (max-width: 400px) {
+            .manual-links a {
+                flex: 1 1 100%;
+                min-width: 100%;
+            }
         }
 
         .manual-links a:hover {
